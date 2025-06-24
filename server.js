@@ -26,6 +26,20 @@ connectDB();
 //Middleware
 app.use(express.json());
 
+//Root route
+app.get("/", (req, res) => {
+    res.json({
+        message: "Task Manager API is running!",
+        status: "success",
+        endpoints: {
+            auth: "/api/auth",
+            users: "/api/users", 
+            tasks: "/api/tasks",
+            reports: "/api/reports"
+        }
+    });
+});
+
 //Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
