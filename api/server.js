@@ -2,12 +2,12 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const connectDB = require("./config/db");
+const connectDB = require("../config/db");
 
-const authRoutes = require("./routes/authRoutes");
-const userRoutes = require("./routes/userRoutes");
-const taskRoutes = require("./routes/taskRoutes");
-const reportRoutes = require("./routes/reportRoutes");
+const authRoutes = require("../routes/authRoutes");
+const userRoutes = require("../routes/userRoutes");
+const taskRoutes = require("../routes/taskRoutes");
+const reportRoutes = require("../routes/reportRoutes");
 
 const app = express();
 
